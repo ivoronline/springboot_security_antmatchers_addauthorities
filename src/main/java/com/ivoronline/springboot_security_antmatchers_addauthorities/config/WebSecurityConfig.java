@@ -13,13 +13,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity httpSecurity) throws Exception {
 
-    //ADD AUTHORITIES TO ENDPOINTS
+    //ADD  ROLES & AUTHORITIES TO ENDPOINTS
     httpSecurity.authorizeRequests()
-      .antMatchers("/EndPoint1").hasRole        ("USER")                     //Add Role
-      .antMatchers("/EndPoint2").hasAnyRole     ("USER", "GUEST")            //Add Roles
-      .antMatchers("/EndPoint3").hasAuthority   ("ROLE_USER")                //Add Authority
-      .antMatchers("/EndPoint4").hasAnyAuthority("ROLE_USER", "ROLE_GUEST")  //Add Authorities
-      .antMatchers("/EndPoint5").hasRole        ("ADMIN");                   //Add Role
+      .antMatchers("/EndPoint2").hasRole        ("USER")                     //Add Role
+      .antMatchers("/EndPoint3").hasAnyRole     ("USER", "GUEST")            //Add Roles
+      .antMatchers("/EndPoint4").hasAuthority   ("ROLE_USER")                //Add Authority
+      .antMatchers("/EndPoint5").hasAnyAuthority("ROLE_USER", "ROLE_GUEST")  //Add Authorities
+      .antMatchers("/EndPoint6").hasRole        ("ADMIN");                   //Add Role
 
     //REDIRECT TO LOGIN FORM
     httpSecurity.formLogin();
