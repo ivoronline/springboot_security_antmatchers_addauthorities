@@ -9,4 +9,5 @@ public class MyController {
   @RequestMapping("/EndPoint2") public String endPoint2() { return "Hello from EndPoint2"; }
   @RequestMapping("/EndPoint3") public String endPoint3() { return "Hello from EndPoint3"; }
   @RequestMapping("/EndPoint4") public String endPoint4() { return "Hello from EndPoint4"; }
+  @RequestMapping("/EndPoint5") public String endPoint5() { return "Hello from EndPoint5"; }
 }
